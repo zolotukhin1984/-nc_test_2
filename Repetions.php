@@ -33,13 +33,13 @@ class Repetions
 
     public function getWhereMoreOne()
     {
-        $uniqueNumberOfOccurrences = array_unique($this->getNumberOfOccurrences());
-        foreach ($uniqueNumberOfOccurrences as $key => $value) {
+        $NumberOfOccurrences = $this->getNumberOfOccurrences();
+        foreach ($NumberOfOccurrences as $key => $value) {
             if ($value > 1) {
-                $this->moreOne[] = $this->arrayNumbers[$key];
+               $res[] = $this->arrayNumbers[$key];
             }
         }
-
+        $this->moreOne = array_unique($res);
         return $this->moreOne;
     }
 }

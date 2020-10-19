@@ -5,7 +5,7 @@
 
 require_once __DIR__ . '/Repetions.php';
 
-$rep = new Repetions([1, 1, 3, 2, 3, 3]);
+$rep = new Repetions([1, 1, 2, 3, 3,]);
 $rep->getWhereMoreOne();
 
 var_dump($rep->moreOne);
